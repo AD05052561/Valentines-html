@@ -61,6 +61,7 @@
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', () => {
   const promptText = document.getElementById('prompt');
   const yesBtn = document.getElementById('yesBtn');
   const noBtn = document.getElementById('noBtn');
@@ -71,10 +72,7 @@
 
   yesBtn.addEventListener('click', () => {
     gifImage.src = 'https://media.tenor.com/G6E-T6-Bl6UAAAAM/bear-kiss-bear-kisses.gif';
-
     promptText.textContent = 'Woooo!!';
-
-    // Remove buttons after clicking Yes
     document.getElementById('buttons').style.display = 'none';
   });
 
@@ -87,10 +85,10 @@
     } else {
       noBtn.textContent = 'Come on please';
     }
-    // Increase Yes button size each time
-    yesSizeMultiplier += 0.2; // Increase size factor
+    yesSizeMultiplier += 0.2;
     yesBtn.style.transform = `scale(${yesSizeMultiplier})`;
   });
+});
 </script>
 
 </body>
